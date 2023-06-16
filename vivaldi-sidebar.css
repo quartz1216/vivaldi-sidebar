@@ -1,0 +1,230 @@
+/*---OS---*/
+/*---Windows---*/
+.win *:not(span){
+    font-family:"Segoe UI","Noto Sans JP"!important;
+}
+.win .vivaldi{
+    display:none;
+}
+.win div#titlebar{
+    display: flex;
+    height: 34px;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.win .window-buttongroup{
+    position: unset!important;
+}
+.win div#pagetitle {
+    display:flex!important;
+    height: 34px!important;
+    padding-left: 14px!important;
+    padding-right: 0px!important;
+}
+
+/*---Mac---*/
+.mac div#titlebar {
+    display: flex;  
+    height: 34px;
+    align-items: center;
+}
+.mac .window-buttongroup {
+    height: 13px;
+    margin-top: 8px!important;
+    margin-left: 15px!important;
+}
+.mac div#pagetitle{
+    display: flex!important;
+    align-items: center;
+    padding-top: 8px!important;
+    padding-right: 0px!important;
+    padding-left: 0px!important;
+    margin-left: 14px!important;
+    font-weight: 400!important  ;
+    position: unset!important;
+}
+
+
+
+/*---MainLayouts---*/
+#browser{
+    display: grid;
+    grid-template-rows:34px 34px 34px 1fr 28px;
+    grid-template-columns:34px 240px 1fr ;
+}
+    #header{
+        grid-area: 1/1/2/3;
+        width:100%
+    }
+    #main{
+        grid-area: 1/1/6/4
+    }
+
+#main{
+    display: grid;
+    grid-template-rows:34px 34px 34px 1fr 56px;
+    grid-template-columns:34px 240px 1fr;
+}
+    .mainbar {
+        grid-area: 2/1/3/3;
+    }
+    .inner {
+        grid-area: 1/1/6/4;
+    }
+
+#panels-container,.inner > div:not(#webview-container){
+    margin-top: 68px;
+}
+div#switch {
+    padding: 0px;
+}
+
+/*---TabLayouts---*/
+span.tabbar-wrapper {
+    display: grid!important;
+    grid-template-columns: 172px 68px;
+    grid-template-rows: 34px 1fr;
+}
+    .button-toolbar.tabbar-workspace-button.workspace-popup {
+        display: grid!important;
+        grid-area: 1 / 1 / 2 / 2;
+        width: 172px!important;
+    }
+    div#tabs-tabbar-container {
+        grid-area: 1 / 1 / 3 / 3;
+    }
+
+div#tabs-container {
+    display: grid!important;
+    grid-template-columns: 172px 68px;
+    grid-template-rows: 34px 1fr;
+}
+    .resize {
+        display: grid!important;
+        grid-area: 2 / 1 / 3 / 3;
+    }
+    .toolbar.toolbar-tabbar.sync-and-trash-container {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+
+/*---Designs---*/
+/*Tabs*/
+.tab.active {
+    background-color: var(--colorHighlightBg)!important;
+    color: var(--colorHighlightFg) !important;
+}
+.tab-strip {
+    margin-right: 6px!important;
+}
+.button-toolbar.synced-tabs-button,.button-toolbar.toggle-trash {
+    width: 34px;
+    height: 34px;
+}
+
+
+/*WindowTitle*/
+#pagetitle > span{
+    font-size: 0px;
+}
+#pagetitle > span:before{
+    font-size: 14px;
+    content:'Vivaldi';
+}
+
+
+/*Addressbar*/
+.UrlBar-AddressField.button-textonly.below {
+    margin-left: 8px;
+    margin-right: 5px;
+    background-color: var(--colorAccentBg)!important;
+    border:0px;
+    border-radius: var(--radius);
+}
+button[title="Reader View"],button[title="Translate Page"],button[title="Enter an address to activate typed history"],.pageload-ticker,.toolbar.toolbar-small{
+    display: none;
+}
+
+
+/*Panel*/
+.panel-group {
+    border-radius: var(--radiusHalf);
+}
+div#panels-container {
+    border: 0px!important;
+}
+
+
+/*Startpage*/
+button.active.button-startpage,.button-startpage.active{
+    border: none!important;
+    background-color: var(--colorHighlightBg)!important;
+    color: var(--colorHighlightFg) !important;
+    border-radius: var(--radiusHalf)!important;
+    margin: 8px!important;
+}
+.startpage-navigation-group{
+    border-left: 0px!important;
+}
+.speeddial .dial {
+    background-color: var(--colorBg);
+    box-shadow: 0 0 0px 0 rgb(0, 0, 0)!important;
+}
+
+
+/*SearchField*/
+input.vivaldi-searchfield.searchfield-input {
+    text-align: center;
+}
+.toolbar-insideinput.SearchEngineSelect-Icon,.toolbar.toolbar-insideinput.ignore-react-onclickoutside {
+    display: none;
+}
+.button-textonly.SpeedDialView-SearchField.iconmenu-container.SearchField.below {
+    background: none;
+    border: 0px;
+    outline: none;
+    box-shadow: none;
+    padding: 0px;
+}
+.on-speeddial {
+    max-width: none;
+}
+input.vivaldi-searchfield.searchfield-input {
+    height: 120px;
+    font-size: 90px;
+    font-weight: 600;
+    color: var(--colorFg)!important;
+}
+.SpeedDialView-Head {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/*Background*/
+div#header,.mainbar,#panels,.tab-strip,.tabbar-wrapper,.resize,.toolbar
+{
+    background-color: var(--colorBg)!important;
+}
+.tabbar-workspace-button ~ #tabs-tabbar-container .SlideBar.SlideBar--FullHeight {
+    top: -90px;
+}
+.startpage-navigation-group{
+    border: 0px;
+}
+#browser{
+    background-color: var(--colorBgLight);
+}
+
+
+/*Remove,Transparent*/
+nav.startpage-navigation.toolbar-medium {
+    background: transparent;
+    box-shadow: none;
+}
+.toolbar-vertical .profile-popup:not(:empty), .toolbar-vertical .toolbar-extensions:not(:empty) {
+    min-height: 0px!important;
+}
+.address-top .mainbar > .toolbar-mainbar {
+    border-bottom: none!important;
+}
