@@ -90,9 +90,11 @@
                 display: grid!important;
                 grid-area: 1 / 1 / 2 / 2;
                 width: 172px!important;
+                z-index: 5;
             }
             div#tabs-tabbar-container {
                 grid-area: 1 / 1 / 3 / 3;
+                display: grid!important
             }
         div#tabs-container {
             display: grid!important;
