@@ -227,10 +227,16 @@
         .address-top .mainbar > .toolbar-mainbar {
             border-bottom: none!important;
         }
+        .StatusInfo-Content {
+            border: 0px!important;
+        }
     /*/Remove,Transparent*/
     /*z-index*/
         div#webview-container {
             z-index: 2;
+        }
+        .button-textonly.StatusInfo {
+            z-index: 3;
         }
     /*/z-index*/
 /*/Designs*/
