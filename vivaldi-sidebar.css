@@ -228,4 +228,9 @@
             border-bottom: none!important;
         }
     /*/Remove,Transparent*/
+    /*z-index*/
+        div#webview-container {
+            z-index: 2;
+        }
+    /*/z-index*/
 /*/Designs*/
