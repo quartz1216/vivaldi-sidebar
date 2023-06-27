@@ -73,11 +73,9 @@
                 grid-area: 1/1/6/4;
             }
 
-        #panels-container,.inner > div:not(#webview-container){
-            margin-top: 68px;
-        }
         div#switch {
             padding: 0px;
+            margin-top: 68px;
         }
     /*/Main*/
     /*Tab*/
@@ -85,6 +83,7 @@
             display: grid!important;
             grid-template-columns: 172px 68px;
             grid-template-rows: 34px 1fr;
+            margin-top: 68px;
         }
             .button-toolbar.tabbar-workspace-button.workspace-popup {
                 display: grid!important;
@@ -132,6 +131,9 @@
             font-size: 14px;
             content:'Vivaldi';
         }
+        div#pagetitle {
+            z-index: 4;
+        }
     /*/WindowTitle*/
 
     /*Addressbar*/
@@ -149,7 +151,12 @@
 
     /*Panel*/
         .panel-group {
-            border-radius: var(--radiusHalf);
+            border-radius: var(--radiusHalf)!important;
+            border: solid var(--colorHighlightBg)!important;
+            background-color:var(--colorBg)!important;
+            margin-left: 250px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         div#panels-container {
             border: 0px!important;
@@ -240,3 +247,7 @@
         }
     /*/z-index*/
 /*/Designs*/
+
+.panel{
+    
+}
