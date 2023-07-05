@@ -151,12 +151,7 @@
 
     /*Panel*/
         .panel-group {
-            border-radius: var(--radiusHalf)!important;
-            border: solid var(--colorHighlightBg)!important;
-            background-color:var(--colorBg)!important;
-            margin-left: 250px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin-left: 240px;
         }
         div#panels-container {
             border: 0px!important;
