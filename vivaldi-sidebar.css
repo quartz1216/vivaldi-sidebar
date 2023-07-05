@@ -123,6 +123,10 @@
             width: 34px;
             height: 34px;
         }
+        div#tabs-tabbar-container {
+            width: 240px!important;
+            box-shadow: none!important;
+        }
     /*/Tab*/
     /*WindowTitle*/
         #pagetitle > span{
