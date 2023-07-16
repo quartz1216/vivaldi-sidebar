@@ -152,6 +152,9 @@
         button[title="Reader View"],button[title="Translate Page"],button[title="Enter an address to activate typed history"],.pageload-ticker,.toolbar.toolbar-small{
             display: none;
         }
+        .UrlBar-AddressField:focus-within {
+            outline: none!important;
+        }
     /*/Addressbar*/
 
     /*Panel*/
