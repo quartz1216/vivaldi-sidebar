@@ -211,6 +211,7 @@
             margin-bottom: 100px;
         }
     /*/SearchField*/
+
     /*Background*/
         div#header,.mainbar,#panels,.tab-strip,.tabbar-wrapper,.resize,.toolbar
         {
@@ -225,7 +226,12 @@
         #browser{
             background-color: var(--colorBgLight);
         }
+        ::selection {
+            background: var(--colorHighlightBg)!important;
+            color: var(--colorHighlightFg) !important;
+        }
     /*Background*/
+
     /*Remove,Transparent*/
         nav.startpage-navigation.toolbar-medium {
             background: transparent;
@@ -241,6 +247,7 @@
             border: 0px!important;
         }
     /*/Remove,Transparent*/
+
     /*z-index*/
         div#webview-container {
             z-index: 2;
