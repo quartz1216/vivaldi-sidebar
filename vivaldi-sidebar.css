@@ -201,14 +201,16 @@
             max-width: none;
         }
         input.vivaldi-searchfield.searchfield-input {
-            height: 120px;
-            font-size: 90px;
-            font-weight: 600;
+            height: 48px;
+            font-size: 24px;
+            font-weight: 400;
+            border-radius: 512px;
             color: var(--colorFg)!important;
+            background-color: var(--colorBg);
         }
         .SpeedDialView-Head {
-            margin-top: 100px;
-            margin-bottom: 100px;
+            margin-bottom: 24px;
+            margin-top: 324px;
         }
     /*/SearchField*/
 
@@ -230,6 +232,11 @@
             background: var(--colorHighlightBg)!important;
             color: var(--colorHighlightFg) !important;
         }
+        /*Home BG*/
+        div#browser {
+            background-position-x: 120px;
+        }
+        /*Home BG*/
     /*Background*/
 
     /*Remove,Transparent*/
