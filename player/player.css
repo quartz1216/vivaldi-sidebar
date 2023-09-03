@@ -15,15 +15,19 @@
     padding: 0px !important;
 }
 
-#tabs-container {
-    padding-left: 4px !important;
+.mac #tabs-container {
+    padding-left: 64px!important;
+}
+
+.win #tabs-container {
+    padding-left: 4px!important;
 }
 
 .tab {
     border-radius: var(--radiusHalf) !important;
 }
 
-.address-top-off #tabs-tabbar-container.top {
+.color-behind-tabs-off #tabs-tabbar-container {
     border-bottom-width: 0px !important;
 }
 
@@ -62,6 +66,6 @@ span.tab-audio {
     overflow: visible;
 }
 
-.UrlBar-AddressField.button-textonly.below {
-    transform: translateY(-34px) !important;
+.UrlBar-AddressField.button-textonly.above {
+    transform: translateY(0px) !important;
 }
