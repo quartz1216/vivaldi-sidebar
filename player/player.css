@@ -16,7 +16,7 @@
 }
 
 .mac #tabs-container {
-    padding-left: 64px!important;
+    padding-left: 84px!important;
 }
 
 .win #tabs-container {
@@ -68,4 +68,8 @@ span.tab-audio {
 
 .UrlBar-AddressField.button-textonly.above {
     transform: translateY(0px) !important;
+}
+
+div#tabs-tabbar-container {
+    border-bottom-width: 0px!important;
 }
