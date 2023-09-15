@@ -158,6 +158,7 @@ button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Acti
 
 div#panels-container {
 	border: 0px !important;
+	width: 34px!important;
 }
 
 #switch{
@@ -192,8 +193,29 @@ div#browser {
 	background-position-x: 120px;
 }
 
+.active.button-startpage.no-page-focus {
+    margin-inline: 0px!important;
+}
 
-/*SearchField*/
+nav.startpage-navigation.toolbar-medium {
+    background: white;
+    margin-inline: auto;
+    margin-top: 12px;
+    border-radius: var(--radius);
+}
+
+.sdwrapper {
+    margin: 12px 34px 34px 34px;
+    border-radius: var(--radius);
+}
+
+.thumbnail-title {
+    padding-top: 0px!important;
+}
+
+.thumbnail-favicon {
+    padding-top: 9px;
+}
 
 
 /*Design*/
