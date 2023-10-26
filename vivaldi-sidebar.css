@@ -1,5 +1,5 @@
 /*Layout*/
-#browser 						{display: grid;grid-template-columns: 274px 1fr;grid-template-rows: 34px 1fr;}
+#browser 	 					{display: grid;grid-template-columns: 274px 1fr;grid-template-rows: 34px 1fr;}
 #header 						{grid-area: 1 / 1 / 2 / 2;}
 #main 							{grid-area: 1 / 1 / 3 / 3;}
 
@@ -38,7 +38,7 @@
 
 /*Windows*/
 .win *:not(span) {
-	font-family: "Segoe UI", "Noto Sans JP" !important;
+	font-family: "Inter","Noto Sans JP" !important;
 }
 
 .win .vivaldi {
@@ -198,7 +198,7 @@ div#browser {
 }
 
 nav.startpage-navigation.toolbar-medium {
-    background: white;
+    background: var(--colorBg);
     margin-inline: auto;
     margin-top: 12px;
     border-radius: var(--radius);
@@ -248,4 +248,15 @@ nav.startpage-navigation.toolbar-medium {
 
 .address-top .mainbar {
 	border-bottom: 0px !important;
+}
+
+/*Popup*/
+.popup > #main > #main > .mainbar {
+    display: none;
+}
+#browser .popup{
+	display: flex!important;
+}
+.popup > #main{
+	display: flex!important;
 }
