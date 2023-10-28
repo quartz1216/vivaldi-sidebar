@@ -263,3 +263,9 @@ nav.startpage-navigation.toolbar-medium {
 .popup > #main{
 	display: flex!important;
 }
+
+#browser.minimal-ui > #main > .inner > #panels-container,
+#browser.minimal-ui > #main > .mainbar,
+#browser.minimal-ui > #header{
+	display:none!important
+}
