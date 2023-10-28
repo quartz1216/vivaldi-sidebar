@@ -227,3 +227,7 @@ div#browser {
 .address-top .mainbar {
 	border-bottom: 0px !important;
 }
+
+#browser.mac.fullscreen .mainbar {
+    display: none;
+}
