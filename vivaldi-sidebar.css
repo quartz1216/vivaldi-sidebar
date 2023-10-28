@@ -269,3 +269,6 @@ nav.startpage-navigation.toolbar-medium {
 #browser.minimal-ui > #header{
 	display:none!important
 }
+button.SlideBar.SlideBar--FullHeight {
+    margin-left: 234px;
+}
