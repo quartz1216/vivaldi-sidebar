@@ -1,5 +1,5 @@
 /*Layout*/
-#browser 						{display: grid;grid-template-columns: 274px 1fr;grid-template-rows: 34px 1fr;}
+#browser 	 					{display: grid;grid-template-columns: 274px 1fr;grid-template-rows: 34px 1fr;}
 #header 						{grid-area: 1 / 1 / 2 / 2;}
 #main 							{grid-area: 1 / 1 / 3 / 3;}
 
@@ -38,7 +38,7 @@
 
 /*Windows*/
 .win *:not(span) {
-	font-family: "Segoe UI", "Noto Sans JP" !important;
+	font-family: "Inter","Noto Sans JP" !important;
 }
 
 .win .vivaldi {
@@ -158,6 +158,7 @@ button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Acti
 
 div#panels-container {
 	border: 0px !important;
+	width: 34px!important;
 }
 
 #switch{
@@ -192,8 +193,29 @@ div#browser {
 	background-position-x: 120px;
 }
 
+.active.button-startpage.no-page-focus {
+    margin-inline: 0px!important;
+}
 
-/*SearchField*/
+nav.startpage-navigation.toolbar-medium {
+    background: var(--colorBg);
+    margin-inline: auto;
+    margin-top: 12px;
+    border-radius: var(--radius);
+}
+
+.sdwrapper {
+    margin: 12px 34px 34px 34px;
+    border-radius: var(--radius);
+}
+
+.thumbnail-title {
+    padding-top: 0px!important;
+}
+
+.thumbnail-favicon {
+    padding-top: 9px;
+}
 
 
 /*Design*/
@@ -230,4 +252,14 @@ div#browser {
 
 #browser.mac.fullscreen .mainbar {
     display: none;
+}
+/*Popup*/
+.popup > #main > #main > .mainbar {
+    display: none;
+}
+#browser .popup{
+	display: flex!important;
+}
+.popup > #main{
+	display: flex!important;
 }
