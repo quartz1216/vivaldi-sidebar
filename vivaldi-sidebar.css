@@ -272,3 +272,12 @@ nav.startpage-navigation.toolbar-medium {
 button.SlideBar.SlideBar--FullHeight {
     margin-left: 234px;
 }
+.find-in-page-wrapper {
+    position: absolute;
+    z-index: 20;
+    padding: 7px 28px;
+    border-radius: calc(var(--radius) + 18px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 36px;
+}
