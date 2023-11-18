@@ -1,0 +1,49 @@
+.tab::after, .tab::before { display: none !important}
+.tab { border-radius: var(--radiusHalf) !important }
+#tabs-tabbar-container.top { margin-bottom: calc(4px / var(--uiZoomLevel))!important }
+.color-behind-tabs-off.address-top .mainbar { background:transparent!important }
+#panels-container.overlay.minimized { position: absolute; }
+#panels-container.overlay.right { right: -34px; }
+.toolbar-large .button-circularimage.button-cropimage.profile-popup button img { height: 22px; width: 22px; }
+span.expand-arrow { display: none; }
+button.vivaldi { margin-top: 7px!important; }
+.tab.active { background-color: var(--colorHighlightBg) !important; color: var(--colorHighlightFg) !important; }
+
+
+.panel-group {
+	margin-left: 239px;
+}
+
+div#panels-container {
+	border: 0px !important;
+	width: 34px!important;
+}
+
+#switch{
+	padding-top: 0px!important;
+}
+
+.button-toolbar {
+    border-radius: var(--radius)!important;
+}
+
+
+/*Startpage*/
+button.active.button-startpage,
+.button-startpage.active {
+	border: none !important;
+	background-color: var(--colorHighlightBg) !important;
+	color: var(--colorHighlightFg) !important;
+	border-radius: var(--radiusHalf) !important;
+	margin: 8px !important;
+}
+
+.startpage-navigation-group {
+	border-left: 0px !important;
+}
+nav.startpage-navigation.toolbar-medium {
+    background: var(--colorBg);
+    margin-inline: auto;
+    margin-top: 12px;
+    border-radius: var(--radius);
+}
