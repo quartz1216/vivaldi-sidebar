@@ -20,6 +20,27 @@
 	width: 46px!important;
 }
 
+.window-buttongroup{
+	height: 46px!important;
+	align-items: center!important;
+}
+
+.mac .window-buttongroup{
+	margin-left :18px!important;
+}
+
+#browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .window-buttongroup {
+    position: relative!important;
+    left: 0px!important;
+    opacity: 1!important;
+}
+
+#browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .mainbar {
+    padding-left: 0!important;
+    transform: unset!important;
+}
+
+
 /*Tab*/
 .tab.active {
 	background-color: var(--colorHighlightBg) !important;
@@ -42,8 +63,8 @@ div#tabs-tabbar-container {
 /*Toolbar*/
 .UrlBar-AddressField{ min-width: 230px; }
 .UrlBar-AddressField.button-textonly.below {
-	margin-left: 8px;
-	margin-right: 5px;
+	margin-left: 4px;
+	margin-right: 4px;
 	background-color: var(--colorAccentBg) !important;
 	border: 0px;
 	border-radius: var(--radius);
@@ -138,8 +159,6 @@ nav.startpage-navigation.toolbar-medium {
 .startpage-navigation.toolbar-medium { background: transparent; box-shadow: none; }
 
 .address-top .mainbar { border-bottom: 0px !important; }
-
-#browser.mac.fullscreen .mainbar { display: none; }
 
 /*Popup*/
 .popup > #main > #main > .mainbar {
