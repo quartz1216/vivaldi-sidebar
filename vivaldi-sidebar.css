@@ -1,190 +1,119 @@
-/*Layout*/
-#main							{display: grid;grid-template-columns: 240px 1fr;grid-template-rows: 140px 1fr;}
-.mainbar 						{grid-area: 1 / 1 / 2 / 2;}
-.inner 							{grid-area: 1 / 1 / 3 / 3;}
-
-.tabbar-wrapper .tabbar-wrapper	{display: grid;grid-template-columns: 1fr 68px;grid-template-rows: 34px 1fr;}
-.tabbar-workspace-button 		{grid-area: 1 / 1 / 2 / 2;}
-#tabs-tabbar-container 			{grid-area: 1 / 1 / 6 / 3;}
-
-#tabs-container 				{display: grid;grid-template-columns: 1fr 68px;grid-template-rows: 34px 1fr;}
-.resize 						{grid-area: 2 / 1 / 3 / 3;}
-.sync-and-trash-container 		{grid-area: 1 / 2 / 2 / 3;}
-
-.tabbar-workspace-button { width: inherit !important; }
-.win *:not(span) { font-family: "Inter","Noto Sans JP" !important; }
+/*Structure*/
+.tabbar-wrapper .tabbar-wrapper,div#tabs-tabbar-container,.mainbar{
+    width: 240px!important;/*Editable*/
+}
+.inner {
+    position: absolute!important;
+    width: 100%;
+    height: 100%;
+}
+.tabbar-wrapper .tabbar-wrapper {
+    margin-top: 110px;
+}
+.tab.pinned span.title {
+    display: none!important;
+}
+div#tabs-container {
+    min-width: 100%!important;
+}
+.tab-strip {
+    display: flex!important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+.separator {
+    position: initial!important;
+    transform: initial!important;
+}
+.tab-position.is-pinned {
+    width: initial!important;
+    margin-top: 2px!important;
+    margin-bottom: 2px!important;
+}
+.tab-position{
+    position: initial!important;
+    transform: initial!important;
+    padding: 0px!important;
+    height: 36px!important;
+    margin-left: 2px!important;
+    margin-right: 2px!important;
+}
+.newtab{
+    position: initial!important;
+    display: none!important;
+}
+.mainbar {
+    border-bottom: initial!important;
+    background: initial!important;
+}
+.toolbar{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.UrlBar-AddressField{
+    min-width: 220px!important;
+} 
 .vivaldi{ 
 	padding:none!important;
 	margin:none!important;
 	height: 46px!important;
 	width: 46px!important;
+    position: absolute!important;
 }
-
 .window-buttongroup{
 	height: 46px!important;
 	align-items: center!important;
 }
-
 .mac .window-buttongroup{
 	margin-left :18px!important;
 }
-
-#browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .window-buttongroup {
-    position: relative!important;
-    left: 0px!important;
-    opacity: 1!important;
+.toolbar {
+    padding: initial!important;
 }
-
-#browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .mainbar {
-    padding-left: 0!important;
-    transform: unset!important;
-}
-
-
-/*Tab*/
-.tab.active {
-	background-color: var(--colorHighlightBg) !important;
-	color: var(--colorHighlightFg) !important;
-}
-
-.button-toolbar.synced-tabs-button, .button-toolbar.toggle-trash {
-	width: 34px;
-	height: 34px;
-}
-
-.tabbar-wrapper{ margin-top:70px }
-
-div#tabs-tabbar-container {
-	width: 240px !important;
-	box-shadow: none !important;
-	padding: 0px !important;
-}
-
-/*Toolbar*/
-.UrlBar-AddressField{ min-width: 230px; }
-.UrlBar-AddressField.button-textonly.below {
-	margin-left: 4px;
-	margin-right: 4px;
-	background-color: var(--colorAccentBg) !important;
-	border: 0px;
-	border-radius: var(--radius);
-}
-
-button[title="Reader View"],
-button[title="Translate Page"],
-button[title="Enter an address to activate typed history"],
-button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Active"],
-.button-toolbar.ContentBlocker-Control,
-.pageload-ticker,
-.toolbar.toolbar-small {
+button[title="Reader View"], button[title="Translate Page"], button[title="Enter an address to activate typed history"], button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Active"], .button-toolbar.ContentBlocker-Control, .pageload-ticker, .toolbar.toolbar-small {
 	display: none;
 }
-
-.toolbar {
-    flex-wrap: wrap;
-	padding:initial!important 
+.tab{
+    width:32px!important;
+    height:32px!important;
 }
-
-/*Panel*/
-.panel-group {
-	margin-left: 240px;
-	left:0!important
+span.favicon, button.button-addressfield.SiteInfoButton.secure{
+    margin: 7px!important;
 }
-
-div#switch {
-    display: none;
-	padding-top: 0px!important;
+.tab-header{
+    margin: 0px!important;
+    padding: 0px!important;
 }
-
-div#panels-container {
-	border: 0px !important;
-	width: 0px!important;
+span.title {
+    padding: 0px!important;
 }
-
 .button-toolbar {
-    border-radius: var(--radius)!important;
+    margin: 1px;
 }
-
-
-/*Startpage*/
-button.active.button-startpage,
-.button-startpage.active {
-	border: none !important;
-	background-color: var(--colorHighlightBg) !important;
-	color: var(--colorHighlightFg) !important;
-	border-radius: var(--radiusHalf) !important;
-	margin: 8px !important;
+#tabs-container .tab.audio-on .favicon{
+    transform: initial!important;
 }
-
-.startpage-navigation-group {
-	border-left: 0px !important;
+.tab-audio{
+    display: none!important;
 }
-
-.speeddial .dial {
-	background-color: var(--colorBg);
-	box-shadow: 0 0 0px 0 rgb(0, 0, 0) !important;
+.UrlBar-AddressField.button-textonly.below {
+    height: 30px!important;
+    border-radius: 15px!important;
 }
-
-div#browser { background-position-x: 120px; }
-
-.active.button-startpage.no-page-focus { margin-inline: 0px!important; }
-
-nav.startpage-navigation.toolbar-medium {
-    background: var(--colorBg);
-    margin-inline: auto;
-    margin-top: 12px;
-    border-radius: var(--radius);
+button.button-addressfield.SiteInfoButton.internal {
+    margin-left: 8px!important;
 }
-
-.sdwrapper {
-    margin: 12px 34px 34px 34px;
-    border-radius: var(--radius);
+.tab.active {
+    background: #4d4d4d!important;
+    box-shadow: 0px 2px 8px 0px #1c1c1c!important;
 }
-
-.thumbnail-title { padding-top: 0px!important; }
-
-
-
-/*Design*/
-#header, .mainbar { background-color: var(--colorBg) !important; }
-
-.tabbar-workspace-button~#tabs-tabbar-container .SlideBar.SlideBar--FullHeight { top: -90px; }
-
-.startpage-navigation-group { border: 0px; }
-
-#browser { background-color: var(--colorBgLight); }
-
-::selection { background: var(--colorHighlightBg) !important; color: var(--colorHighlightFg) !important; }
-
-.startpage-navigation.toolbar-medium { background: transparent; box-shadow: none; }
-
-.address-top .mainbar { border-bottom: 0px !important; }
-
-/*Popup*/
-.popup > #main > #main > .mainbar {
-    display: none;
+.tab-position .tab .tab-header{
+    flex: initial!important;
 }
-#browser .popup{
-	display: flex!important;
-}
-.popup > #main{
-	display: flex!important;
-}
-
-#browser.minimal-ui > #main > .inner > #panels-container,
-#browser.minimal-ui > #main > .mainbar,
-#browser.minimal-ui > #header{
-	display:none!important
-}
-button.SlideBar.SlideBar--FullHeight {
-    margin-left: 234px;
-}
-.find-in-page-wrapper {
-    position: absolute;
-    z-index: 20;
-    padding: 7px 28px;
-    border-radius: calc(var(--radius) + 18px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 36px;
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large{
+    padding-left: 4px!important;
+    padding-right: 6px!important;
+    padding-top: 46px!important;
 }
