@@ -117,3 +117,19 @@ button.button-addressfield.SiteInfoButton.internal {
     padding-right: 6px!important;
     padding-top: 46px!important;
 }
+.window-buttongroup{
+	height: 46px!important;
+	align-items: center!important;
+}
+.mac .window-buttongroup{
+	margin-left :18px!important;
+}
+#browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .window-buttongroup {
+    position: relative!important;
+    left: 0px!important;
+    opacity: 1!important;
+}
+#browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .mainbar {
+    padding-left: 0!important;
+    transform: unset!important;
+}
