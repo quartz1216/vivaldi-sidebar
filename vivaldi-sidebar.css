@@ -1,141 +1,229 @@
 /*Structure*/
-.tabbar-wrapper .tabbar-wrapper,div#tabs-tabbar-container,.mainbar{
-    width: 240px!important;/*Editable*/
+.tabbar-wrapper .tabbar-wrapper,
+div#tabs-tabbar-container,
+.mainbar {
+    width: 248px !important;
+    /*Editable*/
 }
+
 .inner {
-    position: absolute!important;
+    position: absolute !important;
     width: 100%;
     height: 100%;
 }
+
 .tabbar-wrapper .tabbar-wrapper {
     margin-top: 110px;
 }
+
 .tab.pinned span.title {
-    display: none!important;
+    display: none !important;
 }
+
 div#tabs-container {
-    min-width: 100%!important;
+    min-width: 100% !important;
 }
+
 .tab-strip {
-    display: flex!important;
+    display: flex !important;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-start;
 }
+
 .separator {
-    position: initial!important;
-    transform: initial!important;
+    position: initial !important;
+    transform: initial !important;
 }
+
 .tab-position.is-pinned {
-    width: initial!important;
-    margin-top: 2px!important;
-    margin-bottom: 2px!important;
+    width: initial !important;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
 }
-.tab-position{
-    position: initial!important;
-    transform: initial!important;
-    padding: 0px!important;
-    height: 36px!important;
-    margin-left: 2px!important;
-    margin-right: 2px!important;
+
+.tab-position {
+    position: initial !important;
+    transform: initial !important;
+    padding: 0px !important;
+    height: 36px !important;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
 }
-.newtab{
-    position: initial!important;
-    display: none!important;
+
+.newtab {
+    position: initial !important;
+    display: none !important;
 }
+
 .mainbar {
-    border-bottom: initial!important;
-    background: initial!important;
+    border-bottom: initial !important;
+    background: initial !important;
 }
-.toolbar{
+
+.toolbar {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.UrlBar-AddressField{
-    min-width: 220px!important;
-} 
-.vivaldi{ 
-	padding:none!important;
-	margin:none!important;
-	height: 46px!important;
-	width: 46px!important;
-    position: absolute!important;
+
+.UrlBar-AddressField {
+    min-width: 220px !important;
 }
-.window-buttongroup{
-	height: 46px!important;
-	align-items: center!important;
+
+.vivaldi {
+    padding: none !important;
+    margin: none !important;
+    height: 46px !important;
+    width: 46px !important;
+    position: absolute !important;
 }
-.mac .window-buttongroup{
-	margin-left :18px!important;
+
+.window-buttongroup {
+    height: 46px !important;
+    align-items: center !important;
 }
+
+.mac .window-buttongroup {
+    margin-left: 18px !important;
+}
+
 .toolbar {
-    padding: initial!important;
+    padding: initial !important;
 }
-button[title="Reader View"], button[title="Translate Page"], button[title="Enter an address to activate typed history"], button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Active"], .button-toolbar.ContentBlocker-Control, .pageload-ticker, .toolbar.toolbar-small {
-	display: none;
+
+button[title="Reader View"],
+button[title="Translate Page"],
+button[title="Enter an address to activate typed history"],
+button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Active"],
+.button-toolbar.ContentBlocker-Control,
+.pageload-ticker
+{
+    display: none;
 }
-.tab{
-    width:32px!important;
-    height:32px!important;
+
+.tab {
+    width: 32px !important;
+    height: 32px !important;
 }
-span.favicon, button.button-addressfield.SiteInfoButton.secure{
-    margin: 7px!important;
+
+span.favicon{
+    margin:7px!important;
 }
-.tab-header{
-    margin: 0px!important;
-    padding: 0px!important;
+button.button-addressfield.SiteInfoButton{
+    margin-left: 12px !important;
 }
+
+.tab-header {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
 span.title {
-    padding: 0px!important;
+    padding: 0px !important;
 }
+
 .button-toolbar {
     margin: 1px;
 }
-#tabs-container .tab.audio-on .favicon{
-    transform: initial!important;
-}
-.tab-audio{
-    display: none!important;
-}
-.UrlBar-AddressField.button-textonly.below {
-    height: 30px!important;
-    border-radius: 15px!important;
-}
-button.button-addressfield.SiteInfoButton.internal {
-    margin-left: 8px!important;
-}
-.tab.active {
-    background: #4d4d4d!important;
-    box-shadow: 0px 2px 8px 0px #1c1c1c!important;
-}
-.tab-position .tab .tab-header{
-    flex: initial!important;
-}
-.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large{
-    padding-left: 4px!important;
-    padding-right: 6px!important;
-    padding-top: 46px!important;
-}
-.window-buttongroup{
-	height: 46px!important;
-	align-items: center!important;
-}
-.mac .window-buttongroup{
-	margin-left :18px!important;
-}
-#browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .window-buttongroup {
-    top: 0 !important;
-    left: 0px!important;
-    opacity: 1!important;
-}
-#browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .mainbar {
-    padding-left: 0!important;
-    transform: unset!important;
+
+#tabs-container .tab.audio-on .favicon {
+    transform: initial !important;
 }
 
-#browser.mac .window-buttongroup{
-    position: absolute!important;
+.tab-audio {
+    display: none !important;
+}
+
+.UrlBar-AddressField.button-textonly.below {
+    height: 30px !important;
+    border-radius: 15px !important;
+}
+.tab.active {
+    background: var(--colorAccentBg) !important;
+    box-shadow: 0px 2px 8px 0px #00000080 !important;
+}
+
+.tab-position .tab .tab-header {
+    flex: initial !important;
+}
+
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large {
+    padding-left: 4px !important;
+    padding-right: 6px !important;
+    padding-top: 46px !important;
+}
+
+.window-buttongroup {
+    height: 46px !important;
+    align-items: center !important;
+}
+
+.mac .window-buttongroup {
+    margin-left: 18px !important;
+}
+
+#browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .window-buttongroup {
+    top: 0 !important;
+    left: 0px !important;
+    opacity: 1 !important;
+}
+
+#browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .mainbar {
+    padding-left: 0 !important;
+    transform: unset !important;
+}
+
+#browser.mac .window-buttongroup {
+    position: absolute !important;
     top: 0 !important;
     left: 0 !important;
+}
+
+#tabs-container.left .tab-strip,
+#tabs-container.right .tab-strip {
+    padding: 0px 4px !important;
+}
+
+.mainbar {
+    height: 110px !important;
+}
+
+.mainbar>.toolbar-mainbar {
+    height: unset !important;
+}
+
+#header,
+.mainbar {
+    background-color: var(--colorBg) !important;
+}
+
+.startpage-navigation.toolbar-medium {
+    background: transparent;
+    box-shadow: none;
+}
+
+
+.address-top .mainbar {
+    border-bottom: 0px !important;
+}
+
+button.active.button-startpage,
+.button-startpage.active {
+    border: none !important;
+    background-color: var(--colorHighlightBg) !important;
+    color: var(--colorHighlightFg) !important;
+    border-radius: var(--radiusHalf) !important;
+    margin: 8px !important;
+}
+
+.speeddial .dial {
+    background: var(--colorAccentBg) !important;
+}
+
+div.toolbar-extensions+div {
+    display: none;
+}
+.tree-item {
+    border-radius: var(--radius);
 }
