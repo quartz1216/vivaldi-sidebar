@@ -10,6 +10,18 @@ div#tabs-tabbar-container,
     position: absolute !important;
     width: 100%;
     height: 100%;
+
+    .tabber-wrapper {
+        order: 1
+    }
+
+    #panels-container {
+        order: 2
+    }
+
+    #webview-container {
+        order: 3
+    }
 }
 
 .tabbar-wrapper .tabbar-wrapper {
@@ -37,12 +49,6 @@ div#tabs-container {
     transform: initial !important;
 }
 
-.tab-position.is-pinned {
-    width: initial !important;
-    margin-top: 2px !important;
-    margin-bottom: 2px !important;
-}
-
 .tab-position {
     position: initial !important;
     transform: initial !important;
@@ -50,6 +56,12 @@ div#tabs-container {
     height: 36px !important;
     margin-left: 2px !important;
     margin-right: 2px !important;
+
+    &.is-pinned {
+        width: initial !important;
+        margin-top: 2px !important;
+        margin-bottom: 2px !important;
+    }
 }
 
 .newtab {
@@ -59,7 +71,6 @@ div#tabs-container {
 
 .mainbar {
     border-bottom: initial !important;
-    background: initial !important;
 }
 
 .toolbar {
@@ -97,8 +108,7 @@ button[title="Translate Page"],
 button[title="Enter an address to activate typed history"],
 button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Active"],
 .button-toolbar.ContentBlocker-Control,
-.pageload-ticker
-{
+.pageload-ticker {
     display: none;
 }
 
@@ -107,10 +117,11 @@ button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Acti
     height: 32px !important;
 }
 
-span.favicon{
-    margin:7px!important;
+span.favicon {
+    margin: 7px !important;
 }
-button.button-addressfield.SiteInfoButton{
+
+button.button-addressfield.SiteInfoButton {
     margin-left: 12px !important;
 }
 
@@ -139,6 +150,7 @@ span.title {
     height: 30px !important;
     border-radius: 15px !important;
 }
+
 .tab.active {
     background: var(--colorAccentBg) !important;
     box-shadow: 0px 2px 8px 0px #00000080 !important;
@@ -224,31 +236,58 @@ button.active.button-startpage,
 div.toolbar-extensions+div {
     display: none;
 }
+
 .tree-item {
     border-radius: var(--radius);
 }
 
-.tabbar-wrapper .button-toolbar.workspace-popup.tabbar-workspace-button{
-    position: absolute!important;
-    bottom: 0!important;
-    left: 0!important;
+.tabbar-wrapper .button-toolbar.workspace-popup.tabbar-workspace-button {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
 }
 
 .toolbar.toolbar-tabbar.sync-and-trash-container {
-    position: absolute!important;
-    bottom: 0!important;
-    right: 0!important;
-}
-
-.ToolbarButtonPopup-DefaultStyles {
-    bottom: 36px!important;
-}
-
-#header{
-    display: none!important;
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
 }
 
 
-.minimal-ui .vivaldi{
-    display: none!important;
-} 
+
+#header {
+    display: none !important;
+}
+
+
+.minimal-ui .vivaldi {
+    display: none !important;
+}
+
+.panel-collapse-guard {
+    max-width: initial !important;
+}
+
+.panel-group {
+    left: initial !important;
+}
+
+div#panels-container {}
+
+
+#switch {
+    flex: 0 0 0px !important
+}
+
+#panels-container.icons,
+#panels-container.minimized {
+    width: 0px !important
+}
+
+div#panels-container {
+    border: initial !important;
+}
+
+span.button-textonly.StatusInfo {
+    z-index: 100;
+}
