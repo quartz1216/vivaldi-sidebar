@@ -1,5 +1,5 @@
 # Vivaldi Sidebar
-![](assets/window.jpeg)
+![](screenshot.png)
 ## Overview
 This CSS was inspired by "Vivaldi HV" and created for my own use.
 It is a simpler layout with no shadows or other decorations, and less customizable.

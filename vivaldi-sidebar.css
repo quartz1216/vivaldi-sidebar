@@ -227,3 +227,19 @@ div.toolbar-extensions+div {
 .tree-item {
     border-radius: var(--radius);
 }
+
+.tabbar-wrapper .button-toolbar.workspace-popup.tabbar-workspace-button{
+    position: absolute!important;
+    bottom: 0!important;
+    left: 0!important;
+}
+
+.toolbar.toolbar-tabbar.sync-and-trash-container {
+    position: absolute!important;
+    bottom: 0!important;
+    right: 0!important;
+}
+
+.ToolbarButtonPopup-DefaultStyles {
+    bottom: 36px!important;
+}
