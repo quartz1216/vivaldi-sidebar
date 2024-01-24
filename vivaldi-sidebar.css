@@ -243,3 +243,12 @@ div.toolbar-extensions+div {
 .ToolbarButtonPopup-DefaultStyles {
     bottom: 36px!important;
 }
+
+#header{
+    display: none!important;
+}
+
+
+.minimal-ui .vivaldi{
+    display: none!important;
+} 
