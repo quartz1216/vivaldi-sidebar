@@ -1,0 +1,29 @@
+.mainbar {
+    width: 364px;
+    height: 46px;
+    position: absolute;
+}
+
+.tabbar-wrapper .tabbar-wrapper,
+.toolbar-panel {
+    margin-top: 46px;
+}
+
+
+/* outlook */
+#panels-container,
+.mainbar {
+    background: none !important;
+    border: none !important;
+}
+
+button[title="Reader View"],
+button[title="Translate Page"],
+button[title="Enter an address to activate typed history"],
+header,
+.vivaldi {
+    display: none;
+}
+#switch{
+    padding-top:none!important
+}
