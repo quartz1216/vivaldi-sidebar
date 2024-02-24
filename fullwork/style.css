@@ -17,13 +17,46 @@
     border: none !important;
 }
 
-button[title="Reader View"],
-button[title="Translate Page"],
-button[title="Enter an address to activate typed history"],
-header,
-.vivaldi {
+.toolbar-insideinput,
+.button-addressfield,
+.vivaldi,
+.popup .mainbar {
     display: none;
 }
-#switch{
-    padding-top:none!important
+
+.startpage .startpage-navigation,
+.UrlBar-AddressField
+{
+    background: var(--colorBg)!important;
+    box-shadow: none!important;
+    border: none!important;
+}
+.UrlBar-AddressField{
+    margin:0 12px;
+    height:32px;
+}
+.UrlBar-AddressField:focus-within{
+    min-width: 350px;
+    z-index: 5!important;
+}
+.UrlBar-AddressField:focus-within .toolbar-insideinput,
+.UrlBar-AddressField:focus-within .button-addressfield{
+    display: flex;
+}
+
+
+
+
+/* TabBarBottom */
+.tabbar-wrapper .button-toolbar.workspace-popup.tabbar-workspace-button {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    padding-right: 64px!important;
+    
+}
+.toolbar.toolbar-tabbar.sync-and-trash-container {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
 }
