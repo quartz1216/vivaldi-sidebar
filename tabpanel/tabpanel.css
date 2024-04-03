@@ -1,7 +1,0 @@
-div#panels-container {
-    transition: initial !important;
-}
-
-#panels-container:not(.icons) + .tabbar-wrapper {
-    display: none!important; 
-}

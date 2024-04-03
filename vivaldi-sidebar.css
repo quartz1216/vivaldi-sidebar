@@ -3,11 +3,12 @@ body{
     --mainbarwidth:350px;/*sidebar width*/
     --mainbarheight:118px;/*mainbar height*/
 }
-.tabbar-wrapper .tabbar-wrapper,div#tabs-tabbar-container,.mainbar,div#panels-container {
+.tabbar-wrapper .tabbar-wrapper,div#tabs-tabbar-container,div#panels-container {
     width: var(--mainbarwidth) !important;
 }
 .mainbar {
     height: var(--mainbarheight) !important;
+    width: calc(var(--mainbarwidth)+1px) !important;
 }
 .tabbar-wrapper .tabbar-wrapper,div#panels-container {
     margin-top: var(--mainbarheight);
