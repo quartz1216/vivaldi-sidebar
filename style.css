@@ -144,6 +144,9 @@ button.button-addressfield.SiteInfoButton {
     bottom: 0 !important;
     right: 0 !important;
 }
+#tabs-container {
+    width: inherit;
+}
 
 /* Panel */
 #panels-container {/*rmeove animation*/
