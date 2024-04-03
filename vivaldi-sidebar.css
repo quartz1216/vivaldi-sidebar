@@ -1,87 +1,24 @@
 /*Structure*/
-.tabbar-wrapper .tabbar-wrapper,
-div#tabs-tabbar-container,
-.mainbar {
-    width: 248px !important;
-    /*Editable*/
+body{
+    --mainbarwidth:350px;/*sidebar width*/
+    --mainbarheight:118px;/*mainbar height*/
 }
-
+.tabbar-wrapper .tabbar-wrapper,div#tabs-tabbar-container,.mainbar,div#panels-container {
+    width: var(--mainbarwidth) !important;
+}
+.mainbar {
+    height: var(--mainbarheight) !important;
+}
+.tabbar-wrapper .tabbar-wrapper,div#panels-container {
+    margin-top: var(--mainbarheight);
+}
 .inner {
     position: absolute !important;
     width: 100%;
     height: 100%;
-
-    .tabber-wrapper {
-        order: 1
-    }
-
-    #panels-container {
-        order: 2
-    }
-
-    #webview-container {
-        order: 3
-    }
 }
 
-.tabbar-wrapper .tabbar-wrapper {
-    margin-top: 110px;
-}
-
-.tab.pinned span.title {
-    display: none !important;
-}
-
-div#tabs-container {
-    min-width: 100% !important;
-}
-
-.tab-strip {
-    display: flex !important;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: flex-start;
-}
-
-.separator {
-    position: initial !important;
-    transform: initial !important;
-}
-
-.tab-position {
-    position: initial !important;
-    transform: initial !important;
-    padding: 0px !important;
-    height: 36px !important;
-    margin-left: 2px !important;
-    margin-right: 2px !important;
-
-    &.is-pinned {
-        width: initial !important;
-        margin-top: 2px !important;
-        margin-bottom: 2px !important;
-    }
-}
-
-.newtab {
-    position: initial !important;
-    display: none !important;
-}
-
-.mainbar {
-    border-bottom: initial !important;
-}
-
-.toolbar {
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.UrlBar-AddressField {
-    min-width: 220px !important;
-}
-
+/* Mainbar */
 .vivaldi {
     padding: none !important;
     margin: none !important;
@@ -89,205 +26,159 @@ div#tabs-container {
     width: 46px !important;
     position: absolute !important;
 }
-
-.window-buttongroup {
-    height: 46px !important;
-    align-items: center !important;
+.mainbar {
+    border-bottom: initial !important;
 }
-
-.mac .window-buttongroup {
-    margin-left: 18px !important;
-}
-
 .toolbar {
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: initial !important;
 }
-
-button[title="Reader View"],
-button[title="Translate Page"],
-button[title="Enter an address to activate typed history"],
-button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Active"],
-.button-toolbar.ContentBlocker-Control,
-.pageload-ticker {
-    display: none;
-}
-
-.tab {
-    width: 32px !important;
-    height: 32px !important;
-}
-
-span.favicon {
-    margin: 7px !important;
-}
-
-button.button-addressfield.SiteInfoButton {
-    margin-left: 12px !important;
-}
-
-.tab-header {
-    margin: 0px !important;
-    padding: 0px !important;
-}
-
-span.title {
-    padding: 0px !important;
-}
-
-.button-toolbar {
-    margin: 1px;
-}
-
-#tabs-container .tab.audio-on .favicon {
-    transform: initial !important;
-}
-
-.tab-audio {
-    display: none !important;
-}
-
-.UrlBar-AddressField.button-textonly.below {
-    height: 30px !important;
-    border-radius: 15px !important;
-}
-
-.tab.active {
-    background: var(--colorAccentBg) !important;
-    box-shadow: 0px 2px 8px 0px #00000080 !important;
-}
-
-.tab-position .tab .tab-header {
-    flex: initial !important;
-}
-
-.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large {
-    padding-left: 4px !important;
-    padding-right: 6px !important;
-    padding-top: 46px !important;
-}
-
 .window-buttongroup {
     height: 46px !important;
     align-items: center !important;
 }
-
 .mac .window-buttongroup {
     margin-left: 18px !important;
 }
-
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large {
+    padding: 46px 6px 0px 4px!important;
+}
+.window-buttongroup {
+    height: 46px !important;
+    align-items: center !important;
+}
+.mac .window-buttongroup {
+    margin-left: 18px !important;
+}
 #browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .window-buttongroup {
     top: 0 !important;
     left: 0px !important;
     opacity: 1 !important;
 }
-
 #browser.mac.fullscreen:not(.mac-menubar-permanent).disable-titlebar:not(.native) .mainbar {
     padding-left: 0 !important;
     transform: unset !important;
 }
-
 #browser.mac .window-buttongroup {
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
 }
-
-#tabs-container.left .tab-strip,
-#tabs-container.right .tab-strip {
-    padding: 0px 4px !important;
+div.toolbar-extensions+div {
+    display: none;
 }
-
-.mainbar {
-    height: 110px !important;
+.minimal-ui div#panels-container ,
+.minimal-ui .mainbar{
+    display: none !important;
 }
-
+.tabbar-wrapper .tabbar-wrapper,.mainbar {
+    background-color: var(--colorBgAlphaBlur)!important;
+}
+#header{
+    display: none!important;
+}
+.address-top .mainbar {
+    border-bottom: 0px !important;
+}
 .mainbar>.toolbar-mainbar {
     height: unset !important;
 }
 
-#header,
-.mainbar {
-    background-color: var(--colorBg) !important;
+/* Addressbar */
+.UrlBar-AddressField {
+    min-width: 220px !important;
+}
+button[title="Reader View"],button[title="Translate Page"],button[title="Enter an address to activate typed history"],button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Active"],.button-toolbar.ContentBlocker-Control,.pageload-ticker {
+    display: none;
+}
+button.button-addressfield.SiteInfoButton {
+    margin-left: 12px !important;
+}
+.UrlBar-AddressField.button-textonly.below {
+    height: 30px !important;
+    border-radius: 15px !important;
 }
 
-.startpage-navigation.toolbar-medium {
+/* Tab */
+.newtab {
+    display: none !important;
+}
+#tabs-container .tab.audio-on .favicon {
+    transform: initial !important;
+}
+.tab-audio {/*remove audio indicator*/
+    display: none !important;
+}
+.tab.active {/*active tab*/
+    background: var(--colorAccentBg) !important;
+    box-shadow: 0px 2px 8px 0px #00000080 !important;
+}
+.tab-position{/*tabs layout*/
+    height:42px!important;
+    position: initial !important;
+    transform: initial !important;
+}
+.tab{/*tabs layout*/
+    margin: 4px 8px!important;
+    justify-content: center;
+}
+.tab-strip {/*tabs layout*/
+    display: flex;
+    flex-direction: column;
+}
+.tabbar-workspace-button {/*layout workspace button*/
+    background-color: initial!important;
+    box-shadow: none!important;
+    width: calc(var(--mainbarwidth) - 64px)!important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+}
+#tabs-tabbar-container {/*remove background*/
+    background: none !important;
+}
+.sync-and-trash-container {/*layout sync trash icon*/
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
+/* Panel */
+#panels-container {/*rmeove animation*/
+    transition: initial !important;
+}
+#panels-container:not(.icons) + .tabbar-wrapper {
+    display: none!important; /*hide tabbar when panel is open*/
+}
+.panel-collapse-guard {
+    max-width: inherit !important; /*hide panelbar when panel is open*/
+}
+#switch {
+    display: none; /*hide panelbar*/
+}
+.toolbar-edit-mode div#switch {
+    display: flex !important; /*show panelbar when in editmode*/
+}
+#panels-container.icons {
+    width: 0px !important;/*hide panel webview when panel is close*/
+}
+
+/* Startpage */
+.startpage-navigation.toolbar-medium {/*startpage navigation*/
     background: transparent;
     box-shadow: none;
 }
-
-
-.address-top .mainbar {
-    border-bottom: 0px !important;
-}
-
-button.active.button-startpage,
-.button-startpage.active {
+button.active.button-startpage,.button-startpage.active {/*startpage navigation*/
     border: none !important;
     background-color: var(--colorHighlightBg) !important;
     color: var(--colorHighlightFg) !important;
     border-radius: var(--radiusHalf) !important;
     margin: 8px !important;
 }
-
-.speeddial .dial {
-    background: var(--colorAccentBg) !important;
+.startpage-navigation-group {/*hide navigation border*/
+    border: none !important;
 }
-
-div.toolbar-extensions+div {
-    display: none;
-}
-
-.tree-item {
+.tree-item {/*round tree row*/
     border-radius: var(--radius);
-}
-
-.tabbar-wrapper .button-toolbar.workspace-popup.tabbar-workspace-button {
-    position: absolute !important;
-    bottom: 0 !important;
-    left: 0 !important;
-}
-
-.toolbar.toolbar-tabbar.sync-and-trash-container {
-    position: absolute !important;
-    bottom: 0 !important;
-    right: 0 !important;
-}
-
-
-
-#header {
-    display: none !important;
-}
-
-
-.minimal-ui .vivaldi {
-    display: none !important;
-}
-
-.panel-collapse-guard {
-    max-width: initial !important;
-}
-
-.panel-group {
-    left: initial !important;
-}
-
-div#panels-container {}
-
-
-#switch {
-    flex: 0 0 0px !important
-}
-
-#panels-container.icons,
-#panels-container.minimized {
-    width: 0px !important
-}
-
-div#panels-container {
-    border: initial !important;
-}
-
-span.button-textonly.StatusInfo {
-    z-index: 100;
 }

@@ -3,14 +3,17 @@
     border: none !important;
 }
 
-.startpage .startpage-navigation,
 .UrlBar-AddressField,
 .mainbar {
     background: var(--colorBg) !important;
     box-shadow: none !important;
     border: none !important;
 }
-
+.startpage-navigation{
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
 /* hide panelbar */
 .panel-collapse-guard {
     max-width: inherit !important;
