@@ -8,7 +8,7 @@ body{
 }
 .mainbar {
     height: var(--mainbarheight) !important;
-    width: calc(var(--mainbarwidth)+1px) !important;
+    width: calc(var(--mainbarwidth) + 1px) !important;
 }
 .tabbar-wrapper .tabbar-wrapper,div#panels-container {
     margin-top: var(--mainbarheight);
