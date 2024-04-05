@@ -1,7 +1,7 @@
 /*Structure*/
 body{
     --mainbarwidth:350px;/*sidebar width*/
-    --mainbarheight:118px;/*mainbar height*/
+    --mainbarheight:122px;/*mainbar height*/
 }
 .tabbar-wrapper .tabbar-wrapper,div#tabs-tabbar-container,div#panels-container {
     width: var(--mainbarwidth) !important;
@@ -33,7 +33,6 @@ body{
 .toolbar {
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: initial !important;
 }
 .window-buttongroup {
     height: 46px !important;
@@ -88,7 +87,7 @@ div.toolbar-extensions+div {
 
 /* Addressbar */
 .UrlBar-AddressField {
-    min-width: 220px !important;
+    min-width: 300px !important;
 }
 button[title="Reader View"],button[title="Translate Page"],button[title="Enter an address to activate typed history"],button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Active"],.button-toolbar.ContentBlocker-Control,.pageload-ticker {
     display: none;
@@ -99,6 +98,8 @@ button.button-addressfield.SiteInfoButton {
 .UrlBar-AddressField.button-textonly.below {
     height: 30px !important;
     border-radius: 15px !important;
+    margin-bottom: 4px;
+    margin-top: 4px;
 }
 
 /* Tab */
@@ -185,4 +186,57 @@ button.active.button-startpage,.button-startpage.active {/*startpage navigation*
 }
 .tree-item {/*round tree row*/
     border-radius: var(--radius);
+}
+
+
+.settings-sidebar,.settings-content,.manager-content,.manager > .toolbar,.sortselector,.tree-row.folder,.manager-editor{
+    background:transparent!important;
+    box-shadow: none!important;
+}
+.vivaldi-settings.mono-icons,.manager{
+    background-color: var(--colorBgAlphaBlur)!important;
+}
+
+h2,.TabbedView, .TabbedView-List, .TabbedView-Footer,.sortselector,.manager-editor {
+    border: none !important;
+}
+
+.TabbedView--Padded ,.master-detail .master-items:not(:has(.master-items-empty)), .MailAccountSheet .master-items:not(:has(.master-items-empty)){
+    background-color: var(--colorBgLight);
+}
+
+.theme-dark input[type=radio], .theme-dark input[type=checkbox] ,input[type=button]:not(.circular), input[type=submit], input[type=color], .FormButton,select:enabled:not([multiple], [size]), .VivaldiSelector:not(:focus-within) .Inner__control{
+    background-image: none !important;
+}
+
+.startpage-content {
+    position: absolute!important;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+
+.toolbar-default .button-toolbar > button:enabled {
+    background: var(--colorBgIntense)!important;
+}
+
+
+.history.manager > .toolbar.toolbar-default,
+.bookmark.manager > .toolbar.toolbar-default {
+    padding-top: 50px;
+}
+
+[name="PanelNotes"] {
+    display: none !important;
+}
+
+.draggable.dial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumbnail-favicon {
+    height: initial !important;
 }
