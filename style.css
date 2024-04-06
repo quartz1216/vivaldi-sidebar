@@ -240,3 +240,24 @@ h2,.TabbedView, .TabbedView-List, .TabbedView-Footer,.sortselector,.manager-edit
 .thumbnail-favicon {
     height: initial !important;
 }
+
+div#webview-container {
+    overflow: hidden;
+}
+
+div#webpage-stack {
+    border-radius: 8px;
+    margin: 4px;
+    box-shadow: 0px 0px 0px 9px var(--colorBgAlphaBlur)!important;
+}
+#panels-container.left:not(.icons) .panel-group, #panels-container.left.icons:not(:has(.SlideBar)) {
+    border: 0px!important;
+}
+.panel-group {
+    overflow: hidden;
+    margin: 4px 0px 4px 4px;
+    border-radius: 8px;
+}
+div#tabs-tabbar-container{
+    box-shadow: none!important;
+}
