@@ -11,7 +11,7 @@ body{
     width: calc(var(--mainbarwidth) + 1px) !important;
 }
 .tabbar-wrapper .tabbar-wrapper,div#panels-container {
-    margin-top: var(--mainbarheight);
+    padding-top: var(--mainbarheight);
 }
 .inner {
     position: absolute !important;
@@ -72,8 +72,11 @@ div.toolbar-extensions+div {
 .minimal-ui .mainbar{
     display: none !important;
 }
-.tabbar-wrapper .tabbar-wrapper,.mainbar {
+.tabbar-wrapper .tabbar-wrapper {
     background-color: var(--colorBgAlphaBlur)!important;
+}
+.mainbar{
+    background-color: transparent!important;
 }
 #header{
     display: none!important;
