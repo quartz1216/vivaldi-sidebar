@@ -3,6 +3,9 @@ body{
     --mainbarwidth:350px;/*sidebar width*/
     --mainbarheight:122px;/*mainbar height*/
 }
+#browser{
+    --one-background:var(--colorBgAlphaBlur);/*one-background-color*/
+}
 .tabbar-wrapper .tabbar-wrapper,div#panels-container {
     width: var(--mainbarwidth) !important;
 }
@@ -21,7 +24,7 @@ div#tabs-tabbar-container{
     width: 100%;
     height: 100%;
 }
-div#tabs-tabbar-container,.toolbar.toolbar-droptarget.toolbar-mainbar,.panel-group,.vivaldi-settings,.manager{/* one-background */
+div#tabs-tabbar-container,.toolbar.toolbar-droptarget.toolbar-mainbar,.panel-group,.vivaldi-settings,.manager{/* one-panel */
     background: var(--colorBg) !important;
     
 }
@@ -33,7 +36,7 @@ div#webview-container {
 }
 div#webpage-stack {
     margin: 4px 4px 4px 0px;
-    box-shadow: 0px 0px 0px 9px var(--colorBgAlphaBlur)!important;
+    box-shadow: 0px 0px 0px 9px var(--one-background)!important;
 }
 .tab-header {
     color: var(--colorFg);
@@ -46,7 +49,7 @@ div#webpage-stack {
     padding-top: 4px;
 }
 .tabbar-wrapper .tabbar-wrapper {
-    background-color: var(--colorBgAlphaBlur)!important;
+    background-color: var(--one-background)!important;
 }
 
 /* Mainbar */
