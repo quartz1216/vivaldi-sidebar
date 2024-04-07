@@ -4,7 +4,7 @@ body{
     --mainbarheight:122px;/*mainbar height*/
 }
 #browser{
-    --one-background:var(--colorBgAlphaBlur);/*one-background-color*/
+    --one-background:transparent;/*if you change the background, rewrite a here. default is transparent(wallpaper).*/
 }
 .tabbar-wrapper .tabbar-wrapper,div#panels-container {
     width: var(--mainbarwidth) !important;
@@ -28,7 +28,7 @@ div#tabs-tabbar-container,.toolbar.toolbar-droptarget.toolbar-mainbar,.panel-gro
     background: var(--colorBg) !important;
     
 }
-div#tabs-tabbar-container,.toolbar.toolbar-droptarget.toolbar-mainbar,.panel-group,div#webpage-stack,.UrlBar-AddressField.button-textonly.below {/* one-radius */
+div#tabs-tabbar-container,.toolbar.toolbar-droptarget.toolbar-mainbar,.panel-group,div#webpage-stack,.UrlBar-AddressField.button-textonly.below ,div#tabs-subcontainer{/* one-radius */
     border-radius: var(--radius);
 }
 div#webview-container {
@@ -36,20 +36,26 @@ div#webview-container {
 }
 div#webpage-stack {
     margin: 4px 4px 4px 0px;
-    box-shadow: 0px 0px 0px 9px var(--one-background)!important;
+    box-shadow: 0px 0px 0px 9px var(--one-background)!important; 
 }
 .tab-header {
     color: var(--colorFg);
 }
-.toolbar.toolbar-droptarget.toolbar-mainbar,div#tabs-tabbar-container,.panel-group {
+div#tabs-tabbar-container,.panel-group {
     margin: 4px;
     overflow: hidden;
 }
+.toolbar.toolbar-droptarget.toolbar-mainbar{
+    margin: 4px;
+}
 .resize {
-    padding-top: 4px;
+    padding-top: 6px;
 }
 .tabbar-wrapper .tabbar-wrapper {
-    background-color: var(--one-background)!important;
+    background-color: var(--one-background)!important; 
+}
+.tabbar-wrapper::before ,#panels-container{
+    background: transparent !important;
 }
 
 /* Mainbar */
@@ -148,16 +154,17 @@ button.button-addressfield.SiteInfoButton {
     color:var(--colorAccentFg);
     background: var(--colorAccentBg) !important;
 }
-.tab-position{/*tabs layout*/
+.tab-position{
     height:42px!important;
+    width: var(--Width);
     position: initial !important;
     transform: initial !important;
 }
-.tab{/*tabs layout*/
+.tab{
     margin: 4px 8px!important;
     justify-content: center;
 }
-.tab-strip {/*tabs layout*/
+.tab-strip {
     display: flex;
     flex-direction: column;
 }
@@ -176,12 +183,16 @@ button.button-addressfield.SiteInfoButton {
 .sync-and-trash-container {/*layout sync trash icon*/
     position: absolute !important;
     bottom: 0 !important;
-    right: 0 !important;
+    left: 0 !important;
 }
 #tabs-container {
     width: inherit;
 }
+div#tabs-subcontainer {
+    background: var(--colorBgIntense) !important;
     
+    margin: 4px;
+}
 
 /* Panel */
 #panels-container {/*rmeove animation*/
