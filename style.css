@@ -3,12 +3,15 @@ body{
     --mainbarwidth:350px;/*sidebar width*/
     --mainbarheight:122px;/*mainbar height*/
 }
-.tabbar-wrapper .tabbar-wrapper,div#tabs-tabbar-container,div#panels-container {
+.tabbar-wrapper .tabbar-wrapper,div#panels-container {
     width: var(--mainbarwidth) !important;
+}
+div#tabs-tabbar-container{
+    width: calc(var(--mainbarwidth) - 8px)!important;
 }
 .mainbar {
     height: var(--mainbarheight) !important;
-    width: calc(var(--mainbarwidth) + 1px) !important;
+    width: var(--mainbarwidth) !important;
 }
 .tabbar-wrapper .tabbar-wrapper,div#panels-container {
     padding-top: var(--mainbarheight);
@@ -17,6 +20,33 @@ body{
     position: absolute !important;
     width: 100%;
     height: 100%;
+}
+div#tabs-tabbar-container,.toolbar.toolbar-droptarget.toolbar-mainbar,.panel-group,.vivaldi-settings,.manager{/* one-background */
+    background: var(--colorBg) !important;
+    
+}
+div#tabs-tabbar-container,.toolbar.toolbar-droptarget.toolbar-mainbar,.panel-group,div#webpage-stack,.UrlBar-AddressField.button-textonly.below {/* one-radius */
+    border-radius: var(--radius);
+}
+div#webview-container {
+    overflow: hidden;
+}
+div#webpage-stack {
+    margin: 4px 4px 4px 0px;
+    box-shadow: 0px 0px 0px 9px var(--colorBgAlphaBlur)!important;
+}
+.tab-header {
+    color: var(--colorFg);
+}
+.toolbar.toolbar-droptarget.toolbar-mainbar,div#tabs-tabbar-container,.panel-group {
+    margin: 4px;
+    overflow: hidden;
+}
+.resize {
+    padding-top: 4px;
+}
+.tabbar-wrapper .tabbar-wrapper {
+    background-color: var(--colorBgAlphaBlur)!important;
 }
 
 /* Mainbar */
@@ -72,9 +102,6 @@ div.toolbar-extensions+div {
 .minimal-ui .mainbar{
     display: none !important;
 }
-.tabbar-wrapper .tabbar-wrapper {
-    background-color: var(--colorBgAlphaBlur)!important;
-}
 .mainbar{
     background-color: transparent!important;
 }
@@ -90,7 +117,7 @@ div.toolbar-extensions+div {
 
 /* Addressbar */
 .UrlBar-AddressField {
-    min-width: 300px !important;
+    min-width: 290px !important;
 }
 button[title="Reader View"],button[title="Translate Page"],button[title="Enter an address to activate typed history"],button[title="Content Blocker\n• Tracker Blocking Active\n• Ad Blocking Active"],.button-toolbar.ContentBlocker-Control,.pageload-ticker {
     display: none;
@@ -99,8 +126,7 @@ button.button-addressfield.SiteInfoButton {
     margin-left: 12px !important;
 }
 .UrlBar-AddressField.button-textonly.below {
-    height: 30px !important;
-    border-radius: 15px !important;
+    height: 30px !important;    
     margin-bottom: 4px;
     margin-top: 4px;
 }
@@ -116,8 +142,8 @@ button.button-addressfield.SiteInfoButton {
     display: none !important;
 }
 .tab.active {/*active tab*/
+    color:var(--colorAccentFg);
     background: var(--colorAccentBg) !important;
-    box-shadow: 0px 2px 8px 0px #00000080 !important;
 }
 .tab-position{/*tabs layout*/
     height:42px!important;
@@ -142,6 +168,7 @@ button.button-addressfield.SiteInfoButton {
 }
 #tabs-tabbar-container {/*remove background*/
     background: none !important;
+    box-shadow: none!important;
 }
 .sync-and-trash-container {/*layout sync trash icon*/
     position: absolute !important;
@@ -151,6 +178,7 @@ button.button-addressfield.SiteInfoButton {
 #tabs-container {
     width: inherit;
 }
+    
 
 /* Panel */
 #panels-container {/*rmeove animation*/
@@ -171,6 +199,9 @@ button.button-addressfield.SiteInfoButton {
 #panels-container.icons {
     width: 0px !important;/*hide panel webview when panel is close*/
 }
+#panels-container.left:not(.icons) .panel-group, #panels-container.left.icons:not(:has(.SlideBar)) {
+    border: 0px!important;
+}
 
 /* Startpage */
 .startpage-navigation.toolbar-medium {/*startpage navigation*/
@@ -190,77 +221,36 @@ button.active.button-startpage,.button-startpage.active {/*startpage navigation*
 .tree-item {/*round tree row*/
     border-radius: var(--radius);
 }
-
-
-.settings-sidebar,.settings-content,.manager-content,.manager > .toolbar,.sortselector,.tree-row.folder,.manager-editor{
-    background:transparent!important;
-    box-shadow: none!important;
-}
-.vivaldi-settings.mono-icons,.manager{
-    background-color: var(--colorBgAlphaBlur)!important;
-}
-
-h2,.TabbedView, .TabbedView-List, .TabbedView-Footer,.sortselector,.manager-editor {
-    border: none !important;
-}
-
-.TabbedView--Padded ,.master-detail .master-items:not(:has(.master-items-empty)), .MailAccountSheet .master-items:not(:has(.master-items-empty)){
-    background-color: var(--colorBgLight);
-}
-
-.theme-dark input[type=radio], .theme-dark input[type=checkbox] ,input[type=button]:not(.circular), input[type=submit], input[type=color], .FormButton,select:enabled:not([multiple], [size]), .VivaldiSelector:not(:focus-within) .Inner__control{
-    background-image: none !important;
-}
-
 .startpage-content {
     position: absolute!important;
     width: -webkit-fill-available;
     height: -webkit-fill-available;
 }
-
-
-.toolbar-default .button-toolbar > button:enabled {
-    background: var(--colorBgIntense)!important;
-}
-
-
 .history.manager > .toolbar.toolbar-default,
 .bookmark.manager > .toolbar.toolbar-default {
     padding-top: 50px;
 }
-
 [name="PanelNotes"] {
     display: none !important;
 }
-
 .draggable.dial {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
 .thumbnail-favicon {
     height: initial !important;
 }
 
-div#webview-container {
-    overflow: hidden;
-}
-
-div#webpage-stack {
-    border-radius: 8px;
-    margin: 4px;
-    box-shadow: 0px 0px 0px 9px var(--colorBgAlphaBlur)!important;
-}
-#panels-container.left:not(.icons) .panel-group, #panels-container.left.icons:not(:has(.SlideBar)) {
-    border: 0px!important;
-}
-.panel-group {
-    overflow: hidden;
-    margin: 4px 0px 4px 4px;
-    border-radius: 8px;
-}
-div#tabs-tabbar-container{
+/* Settings */
+.settings-sidebar,.settings-content,.manager-content,.manager > .toolbar,.sortselector,.tree-row.folder,.manager-editor{
+    background:transparent!important;
     box-shadow: none!important;
+}
+h2,.TabbedView, .TabbedView-List, .TabbedView-Footer,.sortselector,.manager-editor {
+    border: none !important;
+}
+.toolbar-default .button-toolbar > button:enabled {
+    background: var(--colorBgIntense)!important;
 }
