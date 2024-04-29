@@ -24,6 +24,10 @@
                 padding: unset !important;
                 flex-wrap: wrap;
             }
+                #browser.mac .window-buttongroup.on-mainbar {
+                    height: var(--column-height);
+                    width: 10px;
+                }
                 .vivaldi {
                     height: var(--column-height)!important;
                 }
