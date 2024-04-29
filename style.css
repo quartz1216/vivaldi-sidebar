@@ -16,7 +16,7 @@ div#tabs-tabbar-container{
     height: var(--mainbarheight) !important;
     width: var(--mainbarwidth) !important;
 }
-.tabbar-wrapper .tabbar-wrapper,div#panels-container {
+.tabbar-wrapper .tabbar-wrapper {
     padding-top: var(--mainbarheight);
 }
 .inner {
@@ -154,20 +154,20 @@ button.button-addressfield.SiteInfoButton {
     color:var(--colorAccentFg);
     background: var(--colorAccentBg) !important;
 }
-.tab-position{
+/* .tab-position{
     height:42px!important;
     width: var(--Width);
     position: initial !important;
     transform: initial !important;
-}
+} */
 .tab{
-    margin: 4px 8px!important;
-    justify-content: center;
+    margin-inline: 8px!important;
+
 }
-.tab-strip {
+/* .tab-strip {
     display: flex;
     flex-direction: column;
-}
+} */
 .tabbar-workspace-button {/*layout workspace button*/
     background-color: initial!important;
     box-shadow: none!important;
@@ -198,21 +198,22 @@ div#tabs-subcontainer {
 #panels-container {/*rmeove animation*/
     transition: initial !important;
 }
-#panels-container:not(.icons) + .tabbar-wrapper {
-    display: none!important; /*hide tabbar when panel is open*/
-}
+/* #panels-container:not(.icons) + .tabbar-wrapper {
+    display: none!important;
+    
+} */
 .panel-collapse-guard {
     max-width: inherit !important; /*hide panelbar when panel is open*/
 }
-#switch {
-    display: none; /*hide panelbar*/
-}
+/* #switch {
+    display: none; 
+} */
 .toolbar-edit-mode div#switch {
     display: flex !important; /*show panelbar when in editmode*/
 }
-#panels-container.icons {
-    width: 0px !important;/*hide panel webview when panel is close*/
-}
+/* #panels-container.icons {
+    width: 0px !important;
+} */
 #panels-container.left:not(.icons) .panel-group, #panels-container.left.icons:not(:has(.SlideBar)) {
     border: 0px!important;
 }
@@ -267,4 +268,51 @@ h2,.TabbedView, .TabbedView-List, .TabbedView-Footer,.sortselector,.manager-edit
 }
 .toolbar-default .button-toolbar > button:enabled {
     background: var(--colorBgIntense)!important;
+}
+
+
+div#panels-container {
+    bottom: 0!important;
+    top: var(--mainbarheight)!important;
+    width: var(--mainbarwidth)!important;
+    position: absolute!important;
+}
+.inner > .tabbar-wrapper {
+    position: absolute;
+    height: calc(100% - 50px);
+}
+
+div#webview-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: var(--mainbarwidth);
+}
+div#switch {
+    height: 46px;
+    flex: unset!important;
+    max-width: unset!important;
+    flex-direction: unset!important;
+    border-radius: 8px;
+    margin: 4px;
+    background:var(--colorBg);
+    padding: unset!important;
+}
+.panel-group {
+    left: 0 !important;
+    bottom: 50px !important;
+    top: 0 !important;
+    right: 0;
+    position: absolute;
+}
+
+.icons > #panels > .panel-group{
+    width: 0px!important;
+}
+div#panels {
+    flex-direction: column-reverse;
+}
+#browser{
+    margin: 4px;
 }
