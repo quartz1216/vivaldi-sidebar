@@ -41,10 +41,10 @@
                     height: var(--column-height)!important;
                 }
                     .UrlBar-AddressField > .toolbar-insideinput,.UrlBar-AddressField > .button-addressfield{
-                        display: none !important;
+                        opacity: 0;
                     }
                     .UrlBar-AddressField:focus-within > .toolbar-insideinput,.UrlBar-AddressField:focus-within > .button-addressfield{
-                        display: flex !important;
+                        opacity: 1;
                     }
                     .UrlField {
                         justify-content: center;
