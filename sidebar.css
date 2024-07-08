@@ -6,24 +6,24 @@
 		--custom-background: transparent;
 		--column-height: 46px;
 		--pane-margin: 8px;
-		--sidebar-width: 300px;
+		--sidebar-width: 400px;
 		--panelbar-column: 1;
 		--mainbar-column: 2;
 		--mainbar-height: calc(var(--column-height) * var(--mainbar-column));
 		--panelbar-height: calc(var(--column-height) * var(--panelbar-column));
 
 		/* ---/editable zone --- */
-		.mac {
+		&.mac {
 			.fullscreen {--mainbar-column: 1 !important;.window-buttongroup.on-mainbar {display: none !important;}}
 			.window-buttongroup.on-mainbar {height: var(--column-height);width: 10px;}
 		}
-		.minimal-ui {
+		&.minimal-ui {
 			.mainbar,#panels-container {display: none !important;}
 			#webview-container {left: unset !important;border-radius: unset !important;}
 			#main {margin: unset !important;}
 			.vivaldi {height: unset !important}
 		}
-		.popup {
+		&.popup {
 			.mainbar {display: none !important;}
 			#main {margin: 0px !important;}
 		}
