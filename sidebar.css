@@ -1,239 +1,208 @@
 /* --- editable zone --- */
-*{
-    font-family: "Hack","Segoe UI","Noto Sans JP",sans-serif!important;
-}
-#browser{ 
-    
-    --custom-background: transparent; 
-    --column-height: 46px; 
-    --pane-margin: 8px;
-    --sidebar-width: 300px;
-    --panelbar-column:1;
-    --mainbar-column:2;
-    --mainbar-height:calc(var(--column-height) * var(--mainbar-column));
-    --panelbar-height:calc(var(--column-height) * var(--panelbar-column));
-}
-/* ---editable zone --- */
+* {
+	font-family: "Hack", "Segoe UI", "Noto Sans JP", sans-serif !important;
 
+	#browser {
+		--custom-background: transparent;
+		--column-height: 46px;
+		--pane-margin: 8px;
+		--sidebar-width: 300px;
+		--panelbar-column: 1;
+		--mainbar-column: 2;
+		--mainbar-height: calc(var(--column-height) * var(--mainbar-column));
+		--panelbar-height: calc(var(--column-height) * var(--panelbar-column));
 
+		/* ---/editable zone --- */
+		.mac {
+			.fullscreen {--mainbar-column: 1 !important;.window-buttongroup.on-mainbar {display: none !important;}}
+			.window-buttongroup.on-mainbar {height: var(--column-height);width: 10px;}
+		}
+		.minimal-ui {
+			.mainbar,#panels-container {display: none !important;}
+			#webview-container {left: unset !important;border-radius: unset !important;}
+			#main {margin: unset !important;}
+			.vivaldi {height: unset !important}
+		}
+		.popup {
+			.mainbar {display: none !important;}
+			#main {margin: 0px !important;}
+		}
+		#main {
+			margin: var(--pane-margin);
+			.mainbar {
+				position: absolute;
+				width: var(--sidebar-width);
+				height: var(--mainbar-height);
+				background: var(--custom-background) !important;
+				border-radius: var(--radius);
+				border: unset !important;
+				.toolbar-mainbar {
+					padding: unset !important;
+					flex-wrap: wrap;
+					.vivaldi {
+						height: var(--column-height) !important;
+					}
+					.UrlBar-AddressField {
+						min-width: 100%;
+						outline: unset !important;
+						background: transparent !important;
+						border: unset !important;
+						margin: unset !important;
+						padding: unset !important;
+						height: var(--column-height) !important;
+						&:focus-within {
+							>.toolbar-insideinput,
+							>.button-addressfield {
+								width: unset !important;
+							}
+						}
+						>.toolbar-insideinput,
+						>.button-addressfield {
+							overflow: hidden;
+							width: 0;
+						}
+						.SiteInfoButton {
+							min-width: 0px !important;
+						}
+						.UrlField {
+							justify-content: center;
+							.UrlFragment-Wrapper--ShouldHighlight {
+								--LowlightColor: var(--colorFgIntense) !important;
+							}
+							.UrlFragment--Lowlight {
+								display: none !important;
+							}
+						}
+					}
+				}
+			}
+			.inner {
+				#panels-container {
+					width: var(--sidebar-width) !important;
+					position: absolute !important;
+					bottom: 0;
+					background: transparent !important;
+					border-right-width: 0px !important;
+					top: unset !important;
+					&:not(.icons) {
+						top: calc(var(--mainbar-height) + var(--pane-margin)) !important;
+					}
+					&.icons {
+						.panel-group {
+							width: 0px !important;
+							height: 0px !important;
+						}
+					}
+					#panels {
+						flex-direction: column-reverse;
+						#switch {
+							backdrop-filter: none !important;
+							height: var(--panelbar-height);
+							flex: unset !important;
+							max-width: unset !important;
+							flex-direction: unset !important;
+							padding: unset !important;
+							background: var(--custom-background);
+							overflow-x: unset !important;
+							border-radius: var(--radius);
+							.toolbar-panel {
+								flex-direction: unset !important;
+								justify-content: space-evenly;
+								.button-toolbar {
+									border-radius: var(--radius) !important;
+									&.active {
+										background: var(--colorHighlightBg) !important;
+									}
+								}
+							}
+						}
+						.panel-group {
+							transition: unset !important;
+							position: absolute;
+							left: 0 !important;
+							width: var(--sidebar-width) !important;
+							top: 0;
+							bottom: calc(var(--panelbar-height) + var(--pane-margin)) !important;
+							border: unset !important;
+							border-radius: var(--radius);
+							.panel-collapse-guard {
+								min-width: unset !important;
+								max-width: unset !important;
+							}
+						}
+					}
+				}
+				.tabbar-wrapper>.tabbar-wrapper {
+					height: unset;
+					background: var(--custom-background);
+					position: absolute !important;
+					width: var(--sidebar-width);
+					top: calc(var(--mainbar-height) + var(--pane-margin));
+					bottom: calc(var(--panelbar-height) + var(--pane-margin));
+					border-radius: var(--radius);
+					.tabbar-workspace-button {
+						position: absolute;
+						width: unset !important;
+						bottom: 4px;
+						right: 0;
+						left: 85px !important;
+						color: var(--colorFg) !important;
+						backdrop-filter: unset !important;
+						box-shadow: none !important;
+						background: none !important;
+						.ToolbarButton-Button {
+							color: inherit !important;
+							opacity: unset !important;
+						}
+					}
+					#tabs-tabbar-container {
+						width: unset !important;
+						padding: 4px !important;
+						backdrop-filter: unset !important;
+						background: none !important;
+						box-shadow: none !important;
+						.separator.separator-wsbutton {
+							display: none !important;
+						}
+						.tab-position {
+							--Width: calc(var(--sidebar-width) - var(--pane-margin)) !important;
+							.tab.active {
+								color: var(--colorAccentFg);
+								background: var(--colorBgAlphaHeavier) !important
+							}
+						}
+						.sync-and-trash-container {
+							margin: unset !important;
+							justify-content: unset !important;
+							color: var(--colorFg) !important;
+							.ToolbarButton-Button {
+								color: inherit !important;
+								opacity: unset !important;
+							}
+						}
+					}
+				}
 
-#main {
-    margin: var(--pane-margin);
-}
-    .mainbar {
-        position: absolute;
-        width: var(--sidebar-width);
-        height: var(--mainbar-height);
-        background: var(--custom-background)!important;
-        border-radius: var(--radius);
-        border: unset!important;
-    }
-        .toolbar-mainbar {
-            padding: unset !important;
-            flex-wrap: wrap;
-        }
-            #browser.mac .window-buttongroup.on-mainbar {
-                height: var(--column-height);
-                width: 10px;
-            }
-            .vivaldi {
-                height: var(--column-height)!important;
-            }
-            .UrlBar-AddressField {
-                min-width: 100%;
-                outline: unset !important;
-                background: transparent !important;
-                border: unset !important;
-                margin: unset !important;
-                padding: unset !important;
-                height: var(--column-height)!important;
-            }
-                .UrlBar-AddressField > .toolbar-insideinput,.UrlBar-AddressField > .button-addressfield{
-                    overflow: hidden;
-                    width: 0;
-                }
-                .SiteInfoButton {
-                    min-width: 0px!important;
-                }
-                .UrlBar-AddressField:focus-within > .toolbar-insideinput,.UrlBar-AddressField:focus-within > .button-addressfield{
-                   
-                    width: unset!important;
-                }
-                .UrlField {
-                    justify-content: center;
-                }
-                    .UrlFragment-Wrapper--ShouldHighlight {
-                        --LowlightColor: var(--colorFgIntense)!important;
-                    }
-                    .UrlFragment--Lowlight{
-                        display: none!important;
-                    }
-    /* inner */
-        #panels-container {
-            width: var(--sidebar-width) !important;
-            position: absolute!important;
-            bottom: 0;
-            background: transparent!important;
-            border-right-width: 0px !important;
-            top: unset!important;
-        }
-        #panels-container:not(.icons){
-            top: calc(var(--mainbar-height) + var(--pane-margin))!important;
-        }
-            #panels {
-                flex-direction: column-reverse;
-            }
-                #switch{
-                    backdrop-filter: none!important;
-                    height: var(--panelbar-height);
-                    flex: unset !important;
-                    max-width: unset !important;
-                    flex-direction: unset !important;
-                    padding: unset !important;
-                    background: var(--custom-background);
-                    overflow-x: unset !important;
-                    border-radius: var(--radius);
-                }
-                    .toolbar-panel{
-                        flex-direction: unset !important;
-                        justify-content: space-evenly;
-                    }
-                        .button-toolbar.button-toolbar-webpanel {
-                            border-radius: var(--radius) !important;
-                        }
-                        .button-toolbar.button-toolbar-webpanel.active{
-                            background: var(--colorHighlightBg) !important;
-                        }
-                .icons > #panels > .panel-group{
-                    width: 0px!important;
-                    height: 0px!important;
-                }
-                .panel-group{
-                    transition: unset !important;
-                    position: absolute;
-                    left: 0 !important;
-                    width: var(--sidebar-width) !important;
-                    top: 0;
-                    bottom: calc(var(--panelbar-height) + var(--pane-margin))!important;
-                    border: unset !important;
-                    border-radius: var(--radius);
-                }
-                    .panel-collapse-guard {
-                        min-width: unset !important;
-                        max-width: unset !important;
-                    }
-        .inner > .tabbar-wrapper {
-            height: unset;
-            background: var(--custom-background);
-            position: absolute!important;
-            width: var(--sidebar-width);
-            top: calc(var(--mainbar-height) + var(--pane-margin));
-            bottom: calc(var(--panelbar-height) + var(--pane-margin));
-            border-radius: var(--radius);
-        }
-            div#tabs-tabbar-container {
-                width: unset !important;
-                padding: 4px !important;
-                backdrop-filter: unset !important;
-                background: none!important;
-            }
-                .tab.active {/*active tab*/
-                    color:var(--colorAccentFg);
-                    background: var(--colorBgAlphaHeavier) !important
-                }
-                #tabs-tabbar-container>.separator.separator-wsbutton {
-                    display: none !important;
-                }
-                #tabs-tabbar-container{
-                    box-shadow: none!important;
-                }
-                .tab-position {
-                    --Width: calc(var(--sidebar-width) - var(--pane-margin)) !important;
-                }
-                .tabbar-workspace-button {
-                    position: absolute;
-                    width: unset !important;
-                    bottom: 4px;
-                    right: 0;
-                    left: 85px!important;
-                    color: var(--colorFg) !important;
-                    backdrop-filter: unset !important;
-                    box-shadow: none !important;
-                    background:none!important;
-                }
-                .toolbar-tabbar.sync-and-trash-container {
-                    margin: unset !important;
-                    justify-content: unset !important;
-                    color: var(--colorFg) !important;
-                }
-                button.ToolbarButton-Button {
-                    color: inherit !important;
-                    opacity: unset!important;
-                }
-        div#webview-container {
-            position: absolute;
-            left: calc(var(--sidebar-width) + var(--pane-margin));
-            width: -webkit-fill-available;
-            height: -webkit-fill-available;
-            border-radius: var(--radius);
-            overflow: hidden!important;
-            padding: unset!important;
-        }
-    
-
-.settings-sidebar,.settings-content,.manager-content,.manager > .toolbar,.sortselector,.tree-row.folder,.manager-editor{
-    background:transparent!important;
-    box-shadow: none!important;
-}
-
-
-
-
-.minimal-ui .mainbar{
-    display :none!important
-}
-
-.minimal-ui #panels-container{
-    display: none!important;
-}
-
-.minimal-ui #webview-container{
-    left : unset !important;
-    border-radius: unset !important;
-}
-
-.minimal-ui #main{
-    margin: unset !important;
-}
-
-.minimal-ui .vivaldi{
-    height:unset!important
-}
-
-#browser.popup .mainbar {
-    display: none !important;
-}
-
-#browser.popup #main{
-    margin: 0px!important
-}
-
-nav.startpage-navigation {
-    background: none !important;
-    box-shadow: none !important;
-}
-
-.startpage {
-    background: var(--colorBgAlphaBlur);
-}
-
-.startpage-navigation-group {
-    border: none !important;
-}
-
-#browser.mac.fullscreen {
-    --mainbar-column:1!important
-}
-#browser.mac.fullscreen .window-buttongroup.on-mainbar{
-    display: none!important;
+				#webview-container {
+					position: absolute;
+					left: calc(var(--sidebar-width) + var(--pane-margin));
+					width: -webkit-fill-available;
+					height: -webkit-fill-available;
+					border-radius: var(--radius);
+					overflow: hidden !important;
+					padding: unset !important;
+					.startpage {
+						background: var(--colorBgAlphaBlur);
+						.startpage-navigation {
+							background: none !important;
+							box-shadow: none !important;
+							.startpage-navigation-group {
+								border: none !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
