@@ -53,13 +53,13 @@
 						&:focus-within {
 							>.toolbar-insideinput,
 							>.button-addressfield {
-								width: unset !important;
+								opacity: 1 !important;
 							}
 						}
 						>.toolbar-insideinput,
 						>.button-addressfield {
 							overflow: hidden;
-							width: 0;
+							opacity :0;
 						}
 						.SiteInfoButton {
 							min-width: 0px !important;
