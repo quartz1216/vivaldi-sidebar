@@ -164,6 +164,9 @@
 						.separator.separator-wsbutton {
 							display: none !important;
 						}
+						.tab-strip{
+							-webkit-app-region: drag;
+						}
 						.tab-position {
 							--Width: calc(var(--sidebar-width) - var(--pane-margin)) !important;
 							.tab.active {
