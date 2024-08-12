@@ -1,0 +1,34 @@
+div#tabs-container {
+    height: 44px;
+}.mainbar {
+    align-items: center;
+}.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large {}footer {}
+
+footer {}
+
+.mainbar {}
+
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large {
+    height: var(--item);
+}
+
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large {}
+
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large {}
+
+.mainbar {
+    display: flex;
+}
+
+.toolbar.toolbar-droptarget.toolbar-mainbar.toolbar-visible.toolbar-large {
+    width: -webkit-fill-available;
+}
+
+.UrlBar-AddressField.button-textonly.below {
+    height: var(--item);
+}
+
+input#urlFieldInput {
+    /* display: flex; */
+    /* justify-content: center; */
+}

@@ -1,6 +1,6 @@
 /* --- editable zone --- */
 * {
-	font-family: "Hack", "Segoe UI", "Noto Sans JP", sans-serif !important;
+	font-family: "Segoe UI", "Noto Sans JP", sans-serif !important;
 
 	#browser {
 		--custom-background: transparent;
@@ -45,7 +45,6 @@
 					.UrlBar-AddressField {
 						min-width: 100%;
 						outline: unset !important;
-						background: transparent !important;
 						border: unset !important;
 						margin: unset !important;
 						padding: unset !important;
@@ -163,9 +162,6 @@
 						box-shadow: none !important;
 						.separator.separator-wsbutton {
 							display: none !important;
-						}
-						.tab-strip{
-							-webkit-app-region: drag;
 						}
 						.tab-position {
 							--Width: calc(var(--sidebar-width) - var(--pane-margin)) !important;
