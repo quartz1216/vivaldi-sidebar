@@ -39,14 +39,14 @@
 				.toolbar-mainbar {
 					padding: unset !important;
 					flex-wrap: wrap;
+					color: var(--colorFg);
 					.vivaldi {
 						height: var(--column-height) !important;
 					}
 					.UrlBar-AddressField {
-						min-width: 100%;
 						outline: unset !important;
 						border: unset !important;
-						margin: unset !important;
+						margin: 4px !important;
 						padding: unset !important;
 						height: var(--column-height) !important;
 						&:focus-within {
@@ -165,9 +165,13 @@
 						}
 						.tab-position {
 							--Width: calc(var(--sidebar-width) - var(--pane-margin)) !important;
+							.tab{
+								margin:0!important;
+								border-radius: var(--radius);
+							}
 							.tab.active {
 								color: var(--colorAccentFg);
-								background: var(--colorBgAlphaHeavier) !important
+								background: var(--colorAccentBg) !important
 							}
 						}
 						.sync-and-trash-container {
