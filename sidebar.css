@@ -170,8 +170,8 @@
 								border-radius: var(--radius);
 							}
 							.tab.active {
-								color: var(--colorAccentFg);
-								background: var(--colorAccentBg) !important
+								color: var(--colorHighlightFg);
+								background: var(--colorHighlightBg) !important
 							}
 						}
 						.sync-and-trash-container {
