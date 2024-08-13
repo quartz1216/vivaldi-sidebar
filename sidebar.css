@@ -6,7 +6,7 @@
 		--custom-background: transparent;
 		--column-height: 46px;
 		--pane-margin: 8px;
-		--sidebar-width: 400px;
+		--sidebar-width: 320px;
 		--panelbar-column: 1;
 		--mainbar-column: 2;
 		--mainbar-height: calc(var(--column-height) * var(--mainbar-column));
