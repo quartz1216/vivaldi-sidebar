@@ -2,7 +2,7 @@
 * {
 	font-family: "Segoe UI", "Noto Sans JP", sans-serif !important;
 
-	#browser {
+	#browser.tabs-left {
 		--custom-background: transparent;
 		--column-height: 46px;
 		--pane-margin: 8px;
