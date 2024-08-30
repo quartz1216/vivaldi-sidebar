@@ -7,6 +7,7 @@
 	--panel-row-count:1;
 	--sidebar-width:320px;
 	--pane-margin:8px;
+	--border-radius:var(--radius);
 	&.win{
 		.toolbar-mainbar:has(.window-buttongroup){
 			padding: unset!important;
@@ -30,7 +31,7 @@
 		}
 	}
 	&.mac{
-		
+
 	}
 	#main{
 		display: grid;
@@ -66,6 +67,7 @@
 					display: grid;
 					grid-template-rows: calc(var(--row-height)* var(--panel-row-count)) 1fr;
 					.panel-group {
+						border-radius: var(--border-radius);
 						grid-area: 2 / 1 / 3 / 2;
 						left: unset !important;
 						width: 100% !important;
@@ -82,10 +84,15 @@
 						> .toolbar.toolbar-vertical{
 							flex-direction: row!important;
 						}
+						.button-toolbar.active {
+							box-shadow: unset !important;
+							border-radius: var(--radius) !important;
+						}
 					}
 				}
 			}
 			>.tabbar-wrapper{
+				z-index: 0;
 				grid-area: 3 / 1 / 4 / 2;
 				div#tabs-tabbar-container {
 					width: 100% !important;
@@ -95,7 +102,7 @@
 			#webview-container{
 				margin-left: var(--pane-margin);
 				grid-area: 1 / 2 / 4 / 3;
-				border-radius: 8px;
+				border-radius: var(--border-radius);
 				overflow: hidden;
 			}
 		}
