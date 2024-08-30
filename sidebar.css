@@ -14,7 +14,15 @@
 
 		/* ---/editable zone --- */
 		&.mac {
-			.fullscreen {--mainbar-column: 1 !important;.window-buttongroup.on-mainbar {display: none !important;}}
+			&.fullscreen {
+				--mainbar-column: 1 !important;
+				.UrlBar-AddressField{
+					width: 50%!important;
+				}
+				.window-buttongroup.on-mainbar {
+					display: none !important;
+				}
+			}
 			.window-buttongroup.on-mainbar {height: var(--column-height);width: 10px;}
 		}
 		&.minimal-ui {
@@ -45,6 +53,7 @@
 					}
 					.UrlBar-AddressField {
 						outline: unset !important;
+						min-width: 50%;
 						border: unset !important;
 						margin: 4px !important;
 						padding: unset !important;
