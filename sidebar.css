@@ -1,7 +1,4 @@
-
-
-
-d#browser.tabs-left{
+#browser.tabs-left{
 	--row-height:46px;
 	--mainbar-row-count:2;
 	--panel-row-count:1;
@@ -29,7 +26,7 @@ d#browser.tabs-left{
 		}
 	}
 	&.mac{
-
+		--mainbar-row-count:1!important;
 	}
 	#main{
 		display: grid;
@@ -140,5 +137,13 @@ d#browser.tabs-left{
 }
 
 
-
-
+div#tabs-tabbar-container ,
+.button-toolbar.workspace-popup.tabbar-workspace-button,
+nav.startpage-navigation.toolbar-medium
+{
+    background: unset !important;
+}
+.mainbar,
+nav.startpage-navigation.toolbar-medium {
+    border: unset!important;
+}
